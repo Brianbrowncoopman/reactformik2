@@ -1,13 +1,112 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  user-select: none;
+  box-sizing:content-box
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  text-align: center;
+  background-color: #9ae6db;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  font-family: 'Roboto', sans-serif;
+}
+
+.HomeTitle{
+  font-size: calc(58px + 2vmin);
+  letter-spacing: 5px;
+  margin-bottom: 30px;
+  color: #0075FF;
+}
+
+.HomeTitle + p{
+  margin-bottom: 30px;
+  color:#0075FF;
+}
+
+.Btn{
+  margin-top: 50px;
+  color: #fcf7f7;
+  text-decoration: none;
+  letter-spacing: 3px;
+  border: 2px solid #070707;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: calc(15px + 2vmin);
+  transition: all 300ms;
+  background-color: #335aa8;
+}
+
+.Btn:hover, .Btn:focus{
+  color: #f6fafa;
+  border: 2px solid #070707;
+  box-shadow: 0 0 5px #E4E4E4;
+  padding: 10px 25px;
+  outline: none;
+}
+
+.Form{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 30px 80px;
+  width: 100%;
+  margin-top: 50px;
+  height: 80vh;
+}
+
+.FormGrid:last-of-type{
+  grid-column: 1/3;
+}
+
+.FormLabel{
+  display: block;
+  height: 25px;
+  font-weight: 700;
+  text-align: left;
+  padding: 25px 0 25px 10px;
+  letter-spacing: 3px;
+  font-size: calc(16px + 2vmin);
+  cursor: pointer;
+}
+
+.InptForm{
+  width: 400px;
+  border-radius: 3px;
+  margin-top: 20px;
+  height: 60px;
+  outline: none;
+  background-color: #e5e5e5;
+  font-size: calc(12px + 2vmin);
+  line-height: 45px;
+  padding: 0 40px 0 10px;
+  transition: 300ms ease all;
+  border: 3px solid transparent;
+}
+
+.InptForm:focus{
+  border: 3px solid #0075FF;
+  box-shadow: 3px 0px 10px rgba(163, 163, 163, 0.4);
+}
+
+.ErrorText{
+  display: none;
+  width: 480px;
+  margin-top: 10px;
+  color: #bb2929;
+  font-size: calc(5px + 2vmin);
+}
+
+.RegisteredTitle{
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 100px;
 }
